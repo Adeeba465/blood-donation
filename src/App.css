@@ -1,0 +1,733 @@
+/* Color System & Reset */
+/*:root {
+  --crimson: #990011;
+  --pink-bg: #fff0f2;
+  --pink-border: #ffd1d7;
+  --text-dark: #2d2d2d;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--crimson);
+  padding: 15px 40px;
+  color: var(--white);
+}
+.nav-links a {
+  color: var(--pink-bg);
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.login-btn {
+  background-color: var(--white);
+  color: var(--crimson);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* --- Final Explicit Hero Section CSS --- */
+.hero {
+  /* Linear gradient overlay with direct hex values blended with an absolute medical blood drop image */
+  background: linear-gradient(
+      180deg,
+      rgba(153, 0, 17, 0.92) 0%, 
+      rgba(110, 0, 12, 0.88) 100%
+    ),
+    url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+  
+  background-size: cover !important;
+  background-position: center !important;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff !important;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 44px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  color: #fff0f2; /* Soft light pink-white text */
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hero-btn-primary {
+  background-color: #ffffff;
+  color: #990011;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.hero-btn-primary:hover {
+  background-color: #fce4e4;
+}
+
+.hero-btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-block;
+  border: 2px solid #ffffff;
+  transition: all 0.2s ease;
+}
+
+.hero-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsive adjustment for mobiles */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+/* Search Bar Wrapper */
+.search-container {
+  max-width: 850px;
+  margin: -40px auto 40px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+.search-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border: 1px solid var(--pink-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+}
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+.form-group select, .form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.search-btn {
+  background-color: var(--crimson);
+  color: var(--white);
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 45px;
+}
+
+/* Attractive Donor Cards */
+.donor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+}
+.donor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--pink-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.card-inside {
+  background-color: var(--pink-bg);
+  padding: 20px;
+}
+.card-bottom {
+  background-color: var(--crimson);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-bottom text {
+  color: var(--pink-bg);
+}
+.call-btn {
+  background-color: var(--white);
+  color: var(--crimson);
+  text-decoration: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--crimson);
+  color: var(--pink-bg);
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+/* --- Donor Card Specific Custom Layout --- */
+.donor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--white);
+  border: 1px solid var(--pink-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(153, 0, 17, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(153, 0, 17, 0.08);
+}
+
+/* Light Pink Interior */
+.card-inside {
+  background-color: var(--pink-bg);
+  padding: 22px;
+  flex-grow: 1;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.donor-name {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.blood-badge {
+  background-color: var(--crimson);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.donor-meta {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.text-muted {
+  color: #717171;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Deep Crimson Action Bottom */
+.card-bottom {
+  background-color: var(--crimson);
+  padding: 14px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-label {
+  color: #fff0f2;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.call-btn {
+  background-color: var(--white);
+  color: var(--crimson);
+  text-decoration: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.call-btn:hover {
+  background-color: #fce4e4;
+}/* --- Search Bar Specific Layout Styling --- */
+.search-container {
+  max-width: 900px;
+  margin: -50px auto 40px auto; /* Overlaps nicely over the Hero section background */
+  padding: 0 20px;
+  position: relative;
+  z-index: 100; /* Ensures it floats on top */
+}
+
+.search-card {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(153, 0, 17, 0.08);
+  border: 1px solid var(--pink-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  color: #555555;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  background-color: #fafafa;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  outline: none;
+  color: var(--text-dark);
+  transition: border-color 0.2s ease;
+  appearance: none; /* Removes default native arrow to look unified */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23990011' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.form-group select:focus {
+  border-color: var(--crimson);
+  background-color: var(--white);
+}
+
+.search-btn {
+  background-color: var(--crimson);
+  color: var(--white);
+  border: none;
+  padding: 0 32px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 47px; /* Perfectly aligns height with dropdown fields */
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.search-btn:hover {
+  background-color: #80000e;
+}
+
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive breakpoint scaling for small screens */
+@media (max-width: 600px) {
+  .search-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-btn {
+    width: 100%;
+  }
+}
+/* --- Main Structural Alignment Styles --- */
+.content-section {
+  max-width: 1100px;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: left;
+  border-left: 5px solid var(--crimson);
+  padding-left: 12px;
+}
+
+.loading-text, .no-results {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin: 60px 0;
+}
+
+.donor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+/* --- Complete Matching Deep Crimson Footer Styles --- */
+.footer {
+  background-color: var(--crimson);
+  color: var(--pink-bg);
+  padding: 50px 20px 20px 20px;
+  margin-top: auto; /* Ensures footer sticks to the bottom if page content is short */
+  border-top: 4px solid #80000e;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 240, 242, 0.15);
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.footer-tagline {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffd1d7;
+  max-width: 320px;
+  margin: 0;
+}
+
+.footer-links-group {
+  min-width: 150px;
+}
+
+.footer-links-group h4 {
+  color: var(--white);
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ffd1d7;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  font-size: 13px;
+  color: #ffd1d7;
+}
+/* --- Register Form Custom CSS --- */
+.form-section-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.form-card {
+  background-color: var(--white);
+  border: 1px solid var(--pink-border);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(153, 0, 17, 0.05);
+}
+
+.form-title {
+  font-size: 24px;
+  color: var(--crimson);
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.native-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-row label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.input-row input, .input-row select {
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fafafa;
+}
+
+.input-row input:focus, .input-row select:focus {
+  border-color: var(--crimson);
+  background-color: var(--white);
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.submit-btn {
+  background-color: var(--crimson);
+  color: var(--white);
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #80000e;
+}
+
+.submit-btn:disabled {
+  background-color: #cca3a7;
+  cursor: not-allowed;
+}
+/* ==========================================================================
+   FINAL BRANDING VISIBILITY OVERRIDES (SEARCH BAR & FOOTER)
+   ========================================================================== */
+
+/* --- Search Bar Colors Visibility Fix --- */
+.search-container {
+  margin-top: -60px !important; /* Overlaps safely on top of hero gradient */
+  position: relative;
+  z-index: 999 !important; /* Forces it above everything else */
+}
+
+.search-card {
+  background: #ffffff !important; /* Solid opaque white card background */
+  border: 1px solid #ffd1d7 !important;
+  box-shadow: 0 12px 35px rgba(153, 0, 17, 0.15) !important; /* Distinct rich drop shadow */
+}
+
+/* Explicit high-contrast text color for labels */
+.form-group label {
+  color: #2d2d2d !important; /* Bold charcoal dark gray (extremely clear) */
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Inside select fields dropdown typing text */
+.form-group select {
+  color: #1a1a1a !important; /* Deep dark text inside inputs */
+  background-color: #fdfdfd !important;
+  border: 1px solid #cccccc !important;
+  font-weight: 500 !important;
+}
+
+/* --- Footer Light Elements Overhaul --- */
+.footer {
+  background-color: #990011 !important; /* Solid Deep Crimson */
+}
+
+/* Making brand details highly scannable */
+.footer-logo {
+  color: #ffffff !important; /* Bright White */
+  font-weight: 800;
+}
+
+.footer-tagline {
+  color: #ffffff !important; /* Upgraded from light pink to full readable bright white */
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.footer-links-group h4 {
+  color: #ffffff !important; /* Bright White for headings */
+}
+
+/* Making quick links completely solid and easy to read */
+.footer-links a {
+  color: #ffffff !important; /* Pure White links */
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  color: #ffffff !important; /* Copyright text fix */
+  opacity: 0.85;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding-top: 15px;
+}
+/* --- Donor Card Crimson Border Override --- */
+.donor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  
+  /* 📍 Normal state mein direct clean crimson border */
+  border: 2px solid #990011 !important; 
+  
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(153, 0, 17, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.donor-card:hover {
+  transform: translateY(-4px);
+  
+  /* 📍 Hover state par thoda dugna thick ya deep highlight card glow */
+  border-color: #80000e !important; 
+  box-shadow: 0 8px 25px rgba(153, 0, 17, 0.18) !important;
+}
+/* App.css ke bilkul end par yeh paste karein */
+.register-container {
+    width: 100% !important;
+    max-width: 550px !important;    /* 📍 Form ko bilkul sahi box width mein lock kar dega */
+    margin: 40px auto !important;   /* 📍 Form ko screen ke bilkul center (beech) mein le aayega */
+    padding: 30px !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important; /* Premium clean look */
+    box-sizing: border-box !important;
+}
+
+/* Form ke andar fields ka structure properly clean rakhne ke liye */
+.register-form {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+}
+/* App.css ke bilkul end par yeh paste karein */
+.donor-card .active-donor, 
+.donor-grid p,
+p:contains("Active Donor") {
+    color: #111111 !important; /* Ekdam dark black color */
+    font-weight: 700 !important; /* Bold look taake clear nazar aaye */
+}
