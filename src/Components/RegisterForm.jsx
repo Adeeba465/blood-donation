@@ -47,7 +47,7 @@ function RegisterForm({ onRegisterSuccess }) {
         last_donation_date: ''
       });
       
-      if (onRegisterSuccess) onRegisterSuccess();
+      if (onRegisterSuccess) onRegisterSuccess(); 
     } catch (error) {
       console.error(error);
       setMessage('❌ Registration failed: ' + error.message);
