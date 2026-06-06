@@ -3,12 +3,13 @@ import './App.css';
 import { supabase } from './lib/supabase';
 
 // Humaray components ke clean imports
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import SearchBar from './components/SearchBar';
-import DonorCard from './components/DonorCard';
-import RegisterForm from './components/RegisterForm'; 
-import Footer from './components/Footer';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
+import SearchBar from './Components/SearchBar';
+import DonorCard from './Components/DonorCard';
+import RegisterForm from './Components/RegisterForm'; 
+import Footer from './Components/Footer';
+import DonorRegistration from './Components/DonorRegistration';
 
 // 10 Professional Dummy Records for Fallback/Assessment
 const DUMMY_DONORS = [
@@ -109,7 +110,7 @@ function App() {
       </main>
 
       {/* 5. Registration Form */}
-      <RegisterForm onRegisterSuccess={fetchDonors} />
+      <DonorRegistration onRegisterSuccess={fetchDonors} />
 
       {/* 6. Crimson Footer */}
       <Footer />
